@@ -1,0 +1,30 @@
+{
+  "name": "webapp_testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A5tab/MERN_Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/A5tab/MERN_Test/issues"
+  },
+  "homepage": "https://github.com/A5tab/MERN_Test#readme",
+  "devDependencies": {
+    "chai": "^6.2.1",
+    "chromedriver": "^143.0.0",
+    "mocha": "^11.7.5",
+    "selenium-webdriver": "^4.39.0"
+  }
+}
