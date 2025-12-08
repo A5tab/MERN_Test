@@ -1,14 +1,19 @@
-const { Builder } = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
+const { Builder } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
 
-module.exports = async function driver() {
-  const options = new chrome.Options();
-  options.addArguments('--headless');
-  options.addArguments('--no-sandbox');
-  options.addArguments('--disable-dev-shm-usage');
+async function getDriver() {
+    let options = new chrome.Options();
+    options.addArguments(
+        "--headless",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--window-size=1920,1080"
+    );
 
-  return new Builder()
-    .forBrowser('chrome')
-    .setChromeOptions(options)
-    .build();
-};
+    return await new Builder()
+        .forBrowser("chrome")
+        .setChromeOptions(options)
+        .build();
+}
+
+module.exports = getDriver;
