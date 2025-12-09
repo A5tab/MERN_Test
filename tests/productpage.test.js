@@ -1,5 +1,5 @@
 const { By, until } = require("selenium-webdriver");
-const getDriver = require("./driver.js");
+const getDriver = require("../driver.js");
 
 describe("Product Page Tests", function () {
     this.timeout(60000);
